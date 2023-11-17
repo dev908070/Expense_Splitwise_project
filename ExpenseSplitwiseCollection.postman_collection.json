@@ -1,0 +1,659 @@
+{
+	"info": {
+		"_postman_id": "a299c2a9-340c-4607-9ba7-c4cccc72d2d5",
+		"name": "ExpenseSplitwiseCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31205725"
+	},
+	"item": [
+		{
+			"name": "registeruser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"Dev\",\r\n  \"email\":\"Dev908070@gmail.com\",\r\n  \"mobile_number\":\"9718970575\",\r\n  \"password\":\"Dev@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/registeruser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"registeruser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\":\"Dev908070@gmail.com\",\r\n  \"password\":\"Dev@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/login",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createExpenseGroup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expenseGroupName\":\"Exp1\",\r\n  \"userId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/createExpenseGroup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"createExpenseGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createExpenseUserMapping",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"json_data\":\"[{\\\"name\\\":\\\"Harry\\\",\\\"email\\\":\\\"harry@example.com\\\",\\\"mobileNumber\\\":\\\"10004577899\\\"},{\\\"name\\\":\\\"Bhanu\\\",\\\"email\\\":\\\"Bhanu7@example.com\\\",\\\"mobileNumber\\\":\\\"12733056700\\\"},{\\\"name\\\":\\\"Brijesh\\\",\\\"email\\\":\\\"Brijesh@example.com\\\",\\\"mobileNumber\\\":\\\"12733056710\\\"},{\\\"name\\\":\\\"Pradeep\\\",\\\"email\\\":\\\"Pradeep@example.com\\\",\\\"mobileNumber\\\":\\\"12733056720\\\"}]\",\r\n  \"expGroupId\":\"5\",\r\n  \"userId\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/createExpenseUserMapping",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"createExpenseUserMapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expenseEqualSplit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expGroupId\":\"8\",\r\n  \"expense__by_user_id\":\"1\",\r\n  \"total_expense_amount\":\"1200\",\r\n  \"expense_type\":\"EQUAL\",\r\n  \"user_id_exact_amount_json\":\"\",\r\n  \"user_id_percenta_amount_json\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/expenseSplit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"expenseSplit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expenseExactSplit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expGroupId\":\"1\",\r\n  \"expense__by_user_id\":\"3\",\r\n  \"total_expense_amount\":\"1050\",\r\n  \"expense_type\":\"EXACT\",\r\n  \"user_id_exact_amount_json\":\"[{\\\"expense_by_user_id\\\":\\\"1\\\",\\\"individual_expense_amount\\\":\\\"450\\\"},{\\\"expense_by_user_id\\\":\\\"2\\\",\\\"individual_expense_amount\\\":\\\"600\\\"}]\",\r\n  \"user_id_percenta_amount_json\":\"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/expenseSplit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"expenseSplit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "expensePercentSplit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expGroupId\":\"1\",\r\n  \"expense__by_user_id\":\"2\",\r\n  \"total_expense_amount\":\"1000\",\r\n  \"expense_type\":\"PERCENT\",\r\n  \"user_id_exact_amount_json\":\"\",\r\n  \"user_id_percenta_amount_json\":\"[{\\\"expense_user_id\\\":\\\"1\\\",\\\"expense_percent\\\":\\\"45\\\"},{\\\"expense_user_id\\\":\\\"2\\\",\\\"expense_percent\\\":\\\"55\\\"}]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/expenseSplit",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"expenseSplit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getExpenseGrouplist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expGroupId\":\"1\",\r\n  \"expense__by_user_id\":\"1\",\r\n  \"total_expense_amount\":\"1000\",\r\n  \"expense_type\":\"PERCENT\",\r\n  \"user_id_exact_amount_json\":\"\",\r\n  \"user_id_percenta_amount_json\":\"[{\\\"expense_user_id\\\":\\\"1\\\",\\\"expense_percent\\\":\\\"45\\\"},{\\\"expense_user_id\\\":\\\"2\\\",\\\"expense_percent\\\":\\\"55\\\"}]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/getExpenseGrouplist?userId=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getExpenseGrouplist"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserMappinglist",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expGroupId\":\"1\",\r\n  \"expense__by_user_id\":\"1\",\r\n  \"total_expense_amount\":\"1000\",\r\n  \"expense_type\":\"PERCENT\",\r\n  \"user_id_exact_amount_json\":\"\",\r\n  \"user_id_percenta_amount_json\":\"[{\\\"expense_user_id\\\":\\\"1\\\",\\\"expense_percent\\\":\\\"45\\\"},{\\\"expense_user_id\\\":\\\"2\\\",\\\"expense_percent\\\":\\\"55\\\"}]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/getUserMappinglist?expGroupId=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getUserMappinglist"
+					],
+					"query": [
+						{
+							"key": "expGroupId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getExpenseListbyexpGroupId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expGroupId\":\"1\",\r\n  \"expense__by_user_id\":\"1\",\r\n  \"total_expense_amount\":\"1000\",\r\n  \"expense_type\":\"PERCENT\",\r\n  \"user_id_exact_amount_json\":\"\",\r\n  \"user_id_percenta_amount_json\":\"[{\\\"expense_user_id\\\":\\\"1\\\",\\\"expense_percent\\\":\\\"45\\\"},{\\\"expense_user_id\\\":\\\"2\\\",\\\"expense_percent\\\":\\\"55\\\"}]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/getExpenseListbyexpGroupId?expGroupId=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getExpenseListbyexpGroupId"
+					],
+					"query": [
+						{
+							"key": "expGroupId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getSingleUserExpenseList",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expGroupId\":\"1\",\r\n  \"expense__by_user_id\":\"1\",\r\n  \"total_expense_amount\":\"1000\",\r\n  \"expense_type\":\"PERCENT\",\r\n  \"user_id_exact_amount_json\":\"\",\r\n  \"user_id_percenta_amount_json\":\"[{\\\"expense_user_id\\\":\\\"1\\\",\\\"expense_percent\\\":\\\"45\\\"},{\\\"expense_user_id\\\":\\\"2\\\",\\\"expense_percent\\\":\\\"55\\\"}]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/getSingleUserExpenseList?expGroupId=1&userId=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getSingleUserExpenseList"
+					],
+					"query": [
+						{
+							"key": "expGroupId",
+							"value": "1"
+						},
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showNonZeroBalances",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expGroupId\":\"1\",\r\n  \"expense__by_user_id\":\"1\",\r\n  \"total_expense_amount\":\"1000\",\r\n  \"expense_type\":\"PERCENT\",\r\n  \"user_id_exact_amount_json\":\"\",\r\n  \"user_id_percenta_amount_json\":\"[{\\\"expense_user_id\\\":\\\"1\\\",\\\"expense_percent\\\":\\\"45\\\"},{\\\"expense_user_id\\\":\\\"2\\\",\\\"expense_percent\\\":\\\"55\\\"}]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/showNonZeroBalances?expGroupId=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"showNonZeroBalances"
+					],
+					"query": [
+						{
+							"key": "expGroupId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getowingdata",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwMDEzOTA1MiwianRpIjoiODljYTMyMTgtNzY2Mi00MjY1LTgwZjgtZWFhZjA1YzRlOTdiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6IkRldjkwODA3MEBnbWFpbC5jb20iLCJuYmYiOjE3MDAxMzkwNTIsImV4cCI6MTcwMDE2NDI1Mn0.al4ZP3qK8WtFZ-TcX0K7E3XqfFFzqW9E9flk9OJAG4U",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "api-key",
+						"value": "global_api_key",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"expGroupId\":\"1\",\r\n  \"expense__by_user_id\":\"1\",\r\n  \"total_expense_amount\":\"1000\",\r\n  \"expense_type\":\"PERCENT\",\r\n  \"user_id_exact_amount_json\":\"\",\r\n  \"user_id_percenta_amount_json\":\"[{\\\"expense_user_id\\\":\\\"1\\\",\\\"expense_percent\\\":\\\"45\\\"},{\\\"expense_user_id\\\":\\\"2\\\",\\\"expense_percent\\\":\\\"55\\\"}]\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/getowingdata?expGroupId=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"getowingdata"
+					],
+					"query": [
+						{
+							"key": "expGroupId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
