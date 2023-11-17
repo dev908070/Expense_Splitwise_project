@@ -1,6 +1,6 @@
 # Expense_Splitwise_project
 
-Postman API collection is given
+Postman API collection is given in the code name as "ExpenseSplitwiseCollection.postman_collection.json"
 You can run project and Run API through postman api collection
 Note:- you have to replace email creds mention in the code
 
